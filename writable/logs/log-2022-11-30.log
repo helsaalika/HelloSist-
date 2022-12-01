@@ -1,0 +1,858 @@
+CRITICAL - 2022-11-30 05:57:25 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+ERROR - 2022-11-30 09:13:07 --> Error connecting to the database: ErrorException: oci_connect(): ORA-12541: TNS:no listener in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:127
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_connect(): ...', 'C:\\xampp\\htdocs...', 127, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(127): oci_connect('system', 'aininurulazizah', 'localhost:3306/...', 'utf8')
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(382): CodeIgniter\Database\OCI8\Connection->connect(false)
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE ...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 09:13:07 --> Unable to connect to the database.
+Main connection [oci8]: oci_connect(): ORA-12541: TNS:no listener
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE email=\'aini@gmail.com\' FROM account')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 09:15:16 --> Class 'CodeIgniter\Database\oci\Connection' not found
+in SYSTEMPATH\Database\Database.php on line 136.
+ 1 SYSTEMPATH\Database\Database.php(56): CodeIgniter\Database\Database->initDriver('oci', 'CodeIgniter\\Database\\oci\\Connection', [...])
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 APPPATH\Controllers\Auth.php(17): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 09:15:49 --> Error connecting to the database: ErrorException: oci_connect(): ORA-12541: TNS:no listener in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:127
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_connect(): ...', 'C:\\xampp\\htdocs...', 127, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(127): oci_connect('system', 'aininurulazizah', 'localhost:3306/...', 'utf8')
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(382): CodeIgniter\Database\OCI8\Connection->connect(false)
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE ...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 09:15:49 --> Unable to connect to the database.
+Main connection [OCI8]: oci_connect(): ORA-12541: TNS:no listener
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE email=\'aini@gmail.com\' FROM account')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 09:17:11 --> Error connecting to the database: ErrorException: oci_connect(): ORA-12541: TNS:no listener in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:127
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_connect(): ...', 'C:\\xampp\\htdocs...', 127, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(127): oci_connect('system', 'aininurulazizah', '127.0.0.1:3306/...', 'utf8')
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(382): CodeIgniter\Database\OCI8\Connection->connect(false)
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE ...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 09:17:11 --> Unable to connect to the database.
+Main connection [OCI8]: oci_connect(): ORA-12541: TNS:no listener
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE email=\'aini@gmail.com\' FROM account')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 09:18:30 --> Error connecting to the database: ErrorException: oci_connect(): ORA-12541: TNS:no listener in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:127
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_connect(): ...', 'C:\\xampp\\htdocs...', 127, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(127): oci_connect('system', 'aininurulazizah', '127.0.0.1:3306/...', 'utf8')
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(382): CodeIgniter\Database\OCI8\Connection->connect(false)
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE ...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 09:18:30 --> Unable to connect to the database.
+Main connection [OCI8]: oci_connect(): ORA-12541: TNS:no listener
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE email=\'aini@gmail.com\' FROM account')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 09:19:26 --> Error connecting to the database: ErrorException: oci_connect(): ORA-12541: TNS:no listener in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:127
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_connect(): ...', 'C:\\xampp\\htdocs...', 127, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(127): oci_connect('system', 'aininurulazizah', 'localhost:3306/...', 'utf8')
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(382): CodeIgniter\Database\OCI8\Connection->connect(false)
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE ...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 09:19:26 --> Unable to connect to the database.
+Main connection [OCI8]: oci_connect(): ORA-12541: TNS:no listener
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE email=\'aini@gmail.com\' FROM account')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 09:23:58 --> Error connecting to the database: ErrorException: oci_connect(): ORA-12541: TNS:no listener in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:127
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_connect(): ...', 'C:\\xampp\\htdocs...', 127, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(127): oci_connect('system', 'aininurulazizah', 'localhost:3306/...', 'utf8')
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(382): CodeIgniter\Database\OCI8\Connection->connect(false)
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE ...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 09:23:58 --> Unable to connect to the database.
+Main connection [OCI8]: oci_connect(): ORA-12541: TNS:no listener
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE email=\'aini@gmail.com\' FROM account')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 09:28:29 --> Error connecting to the database: ErrorException: oci_connect(): ORA-12541: TNS:no listener in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:127
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_connect(): ...', 'C:\\xampp\\htdocs...', 127, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(127): oci_connect('system', 'aininurulazizah', 'localhost:3306/...', 'utf8')
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(382): CodeIgniter\Database\OCI8\Connection->connect(false)
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE ...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 09:28:29 --> Unable to connect to the database.
+Main connection [OCI8]: oci_connect(): ORA-12541: TNS:no listener
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE email=\'aini@gmail.com\' FROM account')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 09:29:01 --> ErrorException: oci_execute(): ORA-00923: FROM keyword not found where expected in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #116, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT * WHERE ...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * WHERE ...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE ...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 09:29:01 --> oci_execute(): ORA-00923: FROM keyword not found where expected
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00923: FROM keyword not found where expected', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT * WHERE email=\'aini@gmail.com\' FROM account')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * WHERE email=\'aini@gmail.com\' FROM account')
+ 5 APPPATH\Controllers\Auth.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * WHERE email=\'aini@gmail.com\' FROM account')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 09:29:52 --> Invalid file: shop.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shop.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('shop', [], true)
+ 3 APPPATH\Controllers\Auth.php(20): view('shop', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:28:05 --> Undefined variable: email
+in APPPATH\Controllers\Auth.php on line 18.
+ 1 APPPATH\Controllers\Auth.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: email', 'APPPATH\\Controllers\\Auth.php', 18, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:34:56 --> Undefined variable: email
+in APPPATH\Controllers\Auth.php on line 18.
+ 1 APPPATH\Controllers\Auth.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: email', 'APPPATH\\Controllers\\Auth.php', 18, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:35:00 --> Undefined variable: email
+in APPPATH\Controllers\Auth.php on line 18.
+ 1 APPPATH\Controllers\Auth.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: email', 'APPPATH\\Controllers\\Auth.php', 18, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:39:35 --> Object of class stdClass could not be converted to int
+in APPPATH\Controllers\Auth.php on line 20.
+ 1 APPPATH\Controllers\Auth.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Object of class stdClass could not be converted to int', 'APPPATH\\Controllers\\Auth.php', 20, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:42:07 --> Call to undefined function App\Controllers\num_rows()
+in APPPATH\Controllers\Auth.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:43:09 --> Call to undefined method stdClass::num_rows()
+in APPPATH\Controllers\Auth.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:44:23 --> Call to undefined method CodeIgniter\Database\OCI8\Result::num_rows()
+in APPPATH\Controllers\Auth.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:45:07 --> Call to undefined method stdClass::num_rows()
+in APPPATH\Controllers\Auth.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:46:56 --> Call to undefined method CodeIgniter\Database\OCI8\Result::num_rows()
+in APPPATH\Controllers\Auth.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:51:31 --> Undefined variable: data
+in APPPATH\Controllers\Auth.php on line 22.
+ 1 APPPATH\Controllers\Auth.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Controllers\\Auth.php', 22, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:52:01 --> Undefined variable: data
+in APPPATH\Controllers\Auth.php on line 22.
+ 1 APPPATH\Controllers\Auth.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Controllers\\Auth.php', 22, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:57:57 --> Undefined property: stdClass::$email
+in APPPATH\Controllers\Auth.php on line 23.
+ 1 APPPATH\Controllers\Auth.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$email', 'APPPATH\\Controllers\\Auth.php', 23, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:58:52 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Auth.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 10:59:54 --> Undefined variable: data
+in APPPATH\Controllers\Auth.php on line 27.
+ 1 APPPATH\Controllers\Auth.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Controllers\\Auth.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 11:05:11 --> Undefined variable: username
+in APPPATH\Views\home.php on line 140.
+ 1 APPPATH\Views\home.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: username', 'APPPATH\\Views\\home.php', 140, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Auth.php(27): view('home')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 11:33:31 --> session_start(): A session had already been started - ignoring
+in APPPATH\Views\home.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'session_start(): A session had already been started - ignoring', 'APPPATH\\Views\\home.php', 1, [])
+ 2 APPPATH\Views\home.php(1): session_start()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('home', [], true)
+ 6 APPPATH\Controllers\Auth.php(27): view('home')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 12:27:21 --> Undefined variable: db
+in APPPATH\Controllers\Register.php on line 14.
+ 1 APPPATH\Controllers\Register.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: db', 'APPPATH\\Controllers\\Register.php', 14, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Register->user()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 12:40:45 --> ErrorException: oci_execute(): ORA-00903: invalid table name in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #120, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT * FROM u...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(27): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 12:40:45 --> oci_execute(): ORA-00903: invalid table name
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00903: invalid table name', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT * FROM user WHERE ACCOUNT_ACCOUNT_ID=21')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM user WHERE ACCOUNT_ACCOUNT_ID=21')
+ 5 APPPATH\Controllers\Auth.php(27): CodeIgniter\Database\BaseConnection->query('SELECT * FROM user WHERE ACCOUNT_ACCOUNT_ID=21')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 12:41:21 --> ErrorException: oci_execute(): ORA-00903: invalid table name in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #120, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT * FROM U...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM U...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(27): CodeIgniter\Database\BaseConnection->query('SELECT * FROM U...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 12:41:21 --> oci_execute(): ORA-00903: invalid table name
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00903: invalid table name', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT * FROM User WHERE ACCOUNT_ACCOUNT_ID=21')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM User WHERE ACCOUNT_ACCOUNT_ID=21')
+ 5 APPPATH\Controllers\Auth.php(27): CodeIgniter\Database\BaseConnection->query('SELECT * FROM User WHERE ACCOUNT_ACCOUNT_ID=21')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 12:42:33 --> ErrorException: oci_execute(): ORA-00903: invalid table name in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #120, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT * FROM u...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(27): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 12:42:33 --> oci_execute(): ORA-00903: invalid table name
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00903: invalid table name', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT * FROM user WHERE ACCOUNT_ACCOUNT_ID=21')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM user WHERE ACCOUNT_ACCOUNT_ID=21')
+ 5 APPPATH\Controllers\Auth.php(27): CodeIgniter\Database\BaseConnection->query('SELECT * FROM user WHERE ACCOUNT_ACCOUNT_ID=21')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 12:51:18 --> ErrorException: oci_execute(): ORA-00903: invalid table name in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #120, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT * FROM '...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM '...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(27): CodeIgniter\Database\BaseConnection->query('SELECT * FROM '...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 12:51:18 --> oci_execute(): ORA-00903: invalid table name
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00903: invalid table name', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT * FROM \'user\' WHERE ACCOUNT_ACCOUNT_ID=21')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \'user\' WHERE ACCOUNT_ACCOUNT_ID=21')
+ 5 APPPATH\Controllers\Auth.php(27): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \'user\' WHERE ACCOUNT_ACCOUNT_ID=21')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 12:51:28 --> syntax error, unexpected 'user' (T_STRING), expecting ')'
+in APPPATH\Controllers\Auth.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Auth')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Auth', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 12:53:00 --> Trying to get property 'NAME' of non-object
+in APPPATH\Controllers\Auth.php on line 31.
+ 1 APPPATH\Controllers\Auth.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'NAME\' of non-object', 'APPPATH\\Controllers\\Auth.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 12:54:07 --> Undefined property: CodeIgniter\Database\OCI8\Result::$NAME
+in APPPATH\Controllers\Auth.php on line 31.
+ 1 APPPATH\Controllers\Auth.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\Database\\OCI8\\Result::$NAME', 'APPPATH\\Controllers\\Auth.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 12:54:47 --> Trying to get property 'NAME' of non-object
+in APPPATH\Controllers\Auth.php on line 31.
+ 1 APPPATH\Controllers\Auth.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'NAME\' of non-object', 'APPPATH\\Controllers\\Auth.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 12:55:37 --> Trying to get property 'Name' of non-object
+in APPPATH\Controllers\Auth.php on line 31.
+ 1 APPPATH\Controllers\Auth.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'Name\' of non-object', 'APPPATH\\Controllers\\Auth.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 12:56:48 --> Trying to get property 'Name' of non-object
+in APPPATH\Controllers\Auth.php on line 31.
+ 1 APPPATH\Controllers\Auth.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'Name\' of non-object', 'APPPATH\\Controllers\\Auth.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:06:29 --> Trying to get property 'Name' of non-object
+in APPPATH\Controllers\Auth.php on line 31.
+ 1 APPPATH\Controllers\Auth.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'Name\' of non-object', 'APPPATH\\Controllers\\Auth.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:06:42 --> Trying to get property 'NAME' of non-object
+in APPPATH\Controllers\Auth.php on line 31.
+ 1 APPPATH\Controllers\Auth.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'NAME\' of non-object', 'APPPATH\\Controllers\\Auth.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:11:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 31.
+ 1 APPPATH\Controllers\Auth.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Auth.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:12:08 --> Cannot use [] for reading
+in APPPATH\Controllers\Auth.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:16:42 --> ocifetchstatement() expects parameter 1 to be resource, object given
+in APPPATH\Controllers\Auth.php on line 30.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ocifetchstatement() expects parameter 1 to be resource, object given', 'APPPATH\\Controllers\\Auth.php', 30, [...])
+ 2 APPPATH\Controllers\Auth.php(30): ocifetchstatement(Object(CodeIgniter\Database\OCI8\Result), null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:17:09 --> ocifetchstatement() expects at least 2 parameters, 1 given
+in APPPATH\Controllers\Auth.php on line 30.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ocifetchstatement() expects at least 2 parameters, 1 given', 'APPPATH\\Controllers\\Auth.php', 30, [...])
+ 2 APPPATH\Controllers\Auth.php(30): ocifetchstatement(Object(CodeIgniter\Database\OCI8\Result))
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:17:18 --> ocifetchstatement() expects parameter 1 to be resource, object given
+in APPPATH\Controllers\Auth.php on line 30.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ocifetchstatement() expects parameter 1 to be resource, object given', 'APPPATH\\Controllers\\Auth.php', 30, [...])
+ 2 APPPATH\Controllers\Auth.php(30): ocifetchstatement(Object(CodeIgniter\Database\OCI8\Result), null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:17:45 --> Undefined variable: result
+in APPPATH\Controllers\Auth.php on line 30.
+ 1 APPPATH\Controllers\Auth.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: result', 'APPPATH\\Controllers\\Auth.php', 30, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:21:42 --> Use of undefined constant data - assumed 'data' (this will throw an Error in a future version of PHP)
+in APPPATH\Controllers\Auth.php on line 29.
+ 1 APPPATH\Controllers\Auth.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant data - assumed \'data\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Controllers\\Auth.php', 29, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:23:05 --> Trying to get property 'NAME' of non-object
+in APPPATH\Controllers\Auth.php on line 34.
+ 1 APPPATH\Controllers\Auth.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'NAME\' of non-object', 'APPPATH\\Controllers\\Auth.php', 34, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:24:08 --> Trying to get property 'NAME' of non-object
+in APPPATH\Controllers\Auth.php on line 34.
+ 1 APPPATH\Controllers\Auth.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'NAME\' of non-object', 'APPPATH\\Controllers\\Auth.php', 34, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:24:28 --> Trying to get property 'NAME' of non-object
+in APPPATH\Controllers\Auth.php on line 34.
+ 1 APPPATH\Controllers\Auth.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'NAME\' of non-object', 'APPPATH\\Controllers\\Auth.php', 34, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:27:36 --> Undefined property: stdClass::$NAME
+in APPPATH\Controllers\Auth.php on line 35.
+ 1 APPPATH\Controllers\Auth.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$NAME', 'APPPATH\\Controllers\\Auth.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:28:07 --> Undefined property: stdClass::$Name
+in APPPATH\Controllers\Auth.php on line 35.
+ 1 APPPATH\Controllers\Auth.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$Name', 'APPPATH\\Controllers\\Auth.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 13:29:37 --> ErrorException: oci_execute(): ORA-00904: &quot;NAMA&quot;: invalid identifier in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #120, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT NAMA FRO...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT NAMA FRO...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(29): CodeIgniter\Database\BaseConnection->query('SELECT NAMA FRO...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 13:29:37 --> oci_execute(): ORA-00904: &quot;NAMA&quot;: invalid identifier
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00904: &quot;NAMA&quot;: invalid identifier', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT NAMA FROM users WHERE ACCOUNT_ACCOUNT_ID=21')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT NAMA FROM users WHERE ACCOUNT_ACCOUNT_ID=21')
+ 5 APPPATH\Controllers\Auth.php(29): CodeIgniter\Database\BaseConnection->query('SELECT NAMA FROM users WHERE ACCOUNT_ACCOUNT_ID=21')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 13:30:16 --> ErrorException: oci_execute(): ORA-00904: &quot;NAMA&quot;: invalid identifier in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #120, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT Nama FRO...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Nama FRO...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(29): CodeIgniter\Database\BaseConnection->query('SELECT Nama FRO...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 13:30:16 --> oci_execute(): ORA-00904: &quot;NAMA&quot;: invalid identifier
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00904: &quot;NAMA&quot;: invalid identifier', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT Nama FROM users WHERE ACCOUNT_ACCOUNT_ID=21')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Nama FROM users WHERE ACCOUNT_ACCOUNT_ID=21')
+ 5 APPPATH\Controllers\Auth.php(29): CodeIgniter\Database\BaseConnection->query('SELECT Nama FROM users WHERE ACCOUNT_ACCOUNT_ID=21')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:31:19 --> Undefined property: stdClass::$NAME
+in APPPATH\Controllers\Auth.php on line 36.
+ 1 APPPATH\Controllers\Auth.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$NAME', 'APPPATH\\Controllers\\Auth.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:32:30 --> Undefined property: CodeIgniter\Database\OCI8\Result::$NAME
+in APPPATH\Controllers\Auth.php on line 36.
+ 1 APPPATH\Controllers\Auth.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\Database\\OCI8\\Result::$NAME', 'APPPATH\\Controllers\\Auth.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:33:37 --> Undefined property: CodeIgniter\Database\OCI8\Result::$NAME
+in APPPATH\Controllers\Auth.php on line 35.
+ 1 APPPATH\Controllers\Auth.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\Database\\OCI8\\Result::$NAME', 'APPPATH\\Controllers\\Auth.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:33:47 --> Undefined property: stdClass::$NAME
+in APPPATH\Controllers\Auth.php on line 35.
+ 1 APPPATH\Controllers\Auth.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$NAME', 'APPPATH\\Controllers\\Auth.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:34:38 --> Call to undefined method CodeIgniter\Database\OCI8\Result::Row()
+in APPPATH\Controllers\Auth.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 18:08:33 --> Call to undefined method CodeIgniter\Database\OCI8\Result::Row()
+in APPPATH\Controllers\Auth.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 19:16:23 --> ErrorException: oci_execute(): ORA-00904: &quot;NAME&quot;: invalid identifier in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #121, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT Name FRO...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Name FRO...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(26): CodeIgniter\Database\BaseConnection->query('SELECT Name FRO...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 19:16:23 --> oci_execute(): ORA-00904: &quot;NAME&quot;: invalid identifier
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00904: &quot;NAME&quot;: invalid identifier', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT Name FROM store WHERE account_account_id=\'5\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Name FROM store WHERE account_account_id=\'5\'')
+ 5 APPPATH\Controllers\Auth.php(26): CodeIgniter\Database\BaseConnection->query('SELECT Name FROM store WHERE account_account_id=\'5\'')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 19:16:54 --> ErrorException: oci_execute(): ORA-00904: &quot;NAME&quot;: invalid identifier in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #121, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT Name FRO...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Name FRO...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(26): CodeIgniter\Database\BaseConnection->query('SELECT Name FRO...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 19:16:54 --> oci_execute(): ORA-00904: &quot;NAME&quot;: invalid identifier
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00904: &quot;NAME&quot;: invalid identifier', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT Name FROM store WHERE account_account_id=\'5\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Name FROM store WHERE account_account_id=\'5\'')
+ 5 APPPATH\Controllers\Auth.php(26): CodeIgniter\Database\BaseConnection->query('SELECT Name FROM store WHERE account_account_id=\'5\'')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 19:17:13 --> ErrorException: oci_execute(): ORA-00904: &quot;NAME&quot;: invalid identifier in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #121, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT Name FRO...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Name FRO...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(26): CodeIgniter\Database\BaseConnection->query('SELECT Name FRO...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 19:17:13 --> oci_execute(): ORA-00904: &quot;NAME&quot;: invalid identifier
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00904: &quot;NAME&quot;: invalid identifier', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT Name FROM store WHERE account_account_id=\'5\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Name FROM store WHERE account_account_id=\'5\'')
+ 5 APPPATH\Controllers\Auth.php(26): CodeIgniter\Database\BaseConnection->query('SELECT Name FROM store WHERE account_account_id=\'5\'')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 19:20:19 --> ErrorException: oci_execute(): ORA-00903: invalid table name in C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php:197
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\OCI8\Connection.php(197): oci_execute(Resource id #120, 32)
+#2 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT Name FRO...')
+#3 C:\xampp\htdocs\HelloSist\HelloSist-\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Name FRO...')
+#4 C:\xampp\htdocs\HelloSist\HelloSist-\app\Controllers\Auth.php(23): CodeIgniter\Database\BaseConnection->query('SELECT Name FRO...')
+#5 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+#6 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\HelloSist\HelloSist-\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HelloSist\HelloSist-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\HelloSist\HelloSist-\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-30 19:20:19 --> oci_execute(): ORA-00903: invalid table name
+in SYSTEMPATH\Database\OCI8\Connection.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00903: invalid table name', 'SYSTEMPATH\\Database\\OCI8\\Connection.php', 197, [...])
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(197): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\OCI8\Connection->execute('SELECT Name FROM * WHERE account_account_id=\'5\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT Name FROM * WHERE account_account_id=\'5\'')
+ 5 APPPATH\Controllers\Auth.php(23): CodeIgniter\Database\BaseConnection->query('SELECT Name FROM * WHERE account_account_id=\'5\'')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 19:20:58 --> Trying to get property 'NAME' of non-object
+in APPPATH\Controllers\Auth.php on line 45.
+ 1 APPPATH\Controllers\Auth.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'NAME\' of non-object', 'APPPATH\\Controllers\\Auth.php', 45, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 19:21:23 --> Trying to get property 'OWNER' of non-object
+in APPPATH\Controllers\Auth.php on line 45.
+ 1 APPPATH\Controllers\Auth.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'OWNER\' of non-object', 'APPPATH\\Controllers\\Auth.php', 45, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 19:29:39 --> Trying to get property 'OWNER' of non-object
+in APPPATH\Controllers\Auth.php on line 48.
+ 1 APPPATH\Controllers\Auth.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'OWNER\' of non-object', 'APPPATH\\Controllers\\Auth.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 19:30:13 --> Call to undefined method CodeIgniter\Database\OCI8\Result::get()
+in APPPATH\Controllers\Auth.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 19:30:22 --> Trying to get property 'OWNER' of non-object
+in APPPATH\Controllers\Auth.php on line 48.
+ 1 APPPATH\Controllers\Auth.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'OWNER\' of non-object', 'APPPATH\\Controllers\\Auth.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 19:30:57 --> Trying to get property 'OWNER' of non-object
+in APPPATH\Controllers\Auth.php on line 48.
+ 1 APPPATH\Controllers\Auth.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'OWNER\' of non-object', 'APPPATH\\Controllers\\Auth.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->proseslogin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
